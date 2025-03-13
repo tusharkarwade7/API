@@ -1,0 +1,159 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 300% 300%;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: gradientBG 10s infinite alternate;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* 🚀 Centered Navbar with Glassmorphism */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar ul li {
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul li:hover {
+  transform: scale(1.1);
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  color: #00f7ff;
+  text-shadow: 0px 0px 10px #00f7ff;
+}
+
+/* 🟢 Page Container */
+.page-container {
+  margin-top: 120px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ✨ Glowing Input Fields */
+input {
+  display: block;
+  margin: 15px auto;
+  padding: 12px;
+  font-size: 18px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  border-color: #00f7ff;
+  outline: none;
+  box-shadow: 0px 0px 15px rgba(0, 247, 255, 0.7);
+}
+
+/* 🚀 Animated Glowing Button */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00f7ff, #0077ff);
+  box-shadow: 0px 0px 15px rgba(0, 247, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #0077ff, #0051ff);
+  box-shadow: 0px 0px 20px rgba(0, 247, 255, 0.8);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ✨ Subtle Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .navbar ul li {
+    margin: 5px 0;
+  }
+}
